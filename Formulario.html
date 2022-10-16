@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="uft-8">  
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <link rel="icon" href="img/icon.png">
+    <script>
+      function ValidarFormulario(){
+        var txtNombre= document.getElementById('nombre').value;
+        var txtDireccion= document.getElementById('direccion').value;
+        var txtTelefono= document.getElementById('telefono').value;
+        var txtCorreo= document.getElementById('correo').value;
+        var txtCiudad= document.getElementById('ciudad').value;
+        var txtEdad= document.getElementById('edad').value;
+        if(txtNombre ==null || txtNombre.length==0){
+          alert("Por favor ingresa un nombre");
+          return false;
+        }
+        if(txtDireccion ==null || txtDireccion.length==0){
+          alert("Por favor ingresa una dirección");
+          return false;
+        }
+        if(txtTelefono ==null || txtTelefono.length==0||isNaN(txtTelefono)==true){
+          alert("Por favor ingresa un número de telefono");
+          return false;
+        }
+        if(txtCorreo ==null || txtCorreo.length==0){
+          alert("Por favor ingresa un correo");
+          return false;
+        }
+        if(txtCiudad ==null || txtCiudad.length==0){
+          alert("Por favor ingresa una ciudad");
+          return false;
+        }
+        if(txtEdad ==null || txtEdad.length==0 ||isNaN(txtEdad)==true){
+          alert("Por favor ingresa una edad");
+          return false;
+        }
+        alert("Datos correctos!")
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Principal.html">Practica</a>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="Principal.html">INICIO
+                
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Tablas.html">TABLAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Video.html">VIDEO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Formulario.html">FORMULARIO <span class="visually-hidden">(current)</span></a>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <img id="imagen1" src="img/imagen1.jpg">
+    </div>
+    <div id="contenedor">
+      <h2>Formulario</h2>
+      <form id="formulario" action="" onsubmit="return ValidarFormulario()">
+        
+        <input type="text" name="nombre" id="nombre"placeholder="Nombre">
+        
+        <input type="text" name="direccion" id="direccion" placeholder="Direccion">
+        
+        <input type="text" name="telefono" id="telefono" placeholder="Telefono">
+        
+        <input type="text" name="correo" id="correo" placeholder="Correo">
+        
+        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
+        
+        <input type="text" name="edad" id="edad" placeholder="Edad">
+
+        
+      
+      <button type="submit">ENVIAR</button>
+    </div>
+  </form>
+    <div id="piepagina">
+      <p>Derechos reservados - Juan Andres Bravo B.</p>
+    </div>
+  </body>
+</html>
